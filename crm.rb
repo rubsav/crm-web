@@ -1,3 +1,4 @@
+require_relative 'contact'
 require 'sinatra'
 
 get '/' do
@@ -5,24 +6,20 @@ get '/' do
 	erb :index
 end
 
+get '/contacts' do
+	@contacts = []
+	erb :contacts
+end
 
+get '/contacts/new' do 
+	erb :new_contact
+end
 
-# require './contact'
 # require './rolodex'
-# require 'sinatra'
 
 # $rolodex = Rolodex.new
 
 
-# end
-# get '/contacts' do
-# 	@contacts = []
-# 	erb :contacts
-# end
-
-# get '/contacts/new' do 
-# 	erb :new_contact
-# end
 
 # post '/contacts' do
 # 	puts PARAMS: #{params}
