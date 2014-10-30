@@ -21,8 +21,8 @@ get '/contacts/new' do
 	erb :new_contact
 end
 
-get "/contacts/1000" do
-  @contact = $rolodex.find_by_index(1000)
+get "/contacts/:id" do
+  @contact = $rolodex.find_by_index(params[:id].to_i)
   erb :show_contact
 end
 
