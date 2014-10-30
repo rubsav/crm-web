@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<link rel="stylesheet" type="text/css" href="/style.css">
-  	<title> Ruben's Crm App </title>
-  		<header> <h1>Ruben's Crm App</h1></header>
-  		<nav>
-  		<a href="/">
-        	<img src="http://craigmart.in/wp-content/themes/wp_craigmart.in/assets/img/crm-logo4.png"/>
-  		</a>
-  			
-  		</nav>
-  </head>
-  
-  <body>
+<head>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<title> Ruben's Crm App </title>
+	<header>
+		<h1>Welcome to Ruben's CRM App</h1>
+	</header>
+	
+	<h2>Main Menu</h2>
+	<a href="/"> 
+		<img id="menuimg" src="http://craigmart.in/wp-content/themes/wp_craigmart.in/assets/img/crm-logo4.png"/>
+	</a>
+	<body>
+		<%= yield %>
+	</body>
+	<footer> 
+		<h3>&copy; Bitmaker Labs - Ruben Avila Aguilar</h3>
+	</footer>
+</head>
 
-    <%= yield %>
-  </body>
-  <footer> <h5>&copy; Bitmaker Labs - Ruben Avila</h5></footer>
 </html>

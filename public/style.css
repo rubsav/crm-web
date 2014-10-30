@@ -1,0 +1,44 @@
+#menuimg {
+	height:50px;
+	width:150px;
+	float:left;   
+}
+
+header {
+	text-align: center;
+	background:url("https://m1.behance.net/rendition/modules/2380787/disp/1545721267469656.jpg");
+	color:rgb(0, 144, 248);
+	padding: 100px;
+}
+h1 {
+	text-shadow: 2px 2px black;
+}
+h2 {
+	margin-left: 1em;
+	margin-bottom: 0px;
+	color:Deepskyblue;
+}
+
+footer {
+	background-color:black;
+	color:White;
+	text-align:center;
+}
+
+a{
+	margin-left: 1em;
+	color:Limegreen;
+	float: left;
+	
+}
+
+ul {
+	list-style-type: none;
+	padding-bottom: 100px;
+
+}
+li {
+	margin-right: 5em;
+	display: inline-table;
+	margin-left: 5em;
+}
