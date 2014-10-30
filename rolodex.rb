@@ -3,7 +3,7 @@ class Rolodex
 	
 	def initialize
 		@contacts = []
-		@index = 0
+		@index = 1000
 	end
 	
 	def add_contact(contact)
@@ -22,7 +22,7 @@ class Rolodex
 	end
 
 	def find_by_index(id)
-		@contacts.rindex {|contact| (contact.id == id[0])}
+		@contacts.each {|contact| return contact if contact.id == id}
 	end
 
 	def display_single(single_index)
