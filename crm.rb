@@ -21,23 +21,22 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 #routes
-get '/' do
+get "/" do
 	@rubens_crm = "Ruben's CRM App"
 	erb :index
 end
 
-get '/contacts' do
-	@contacts = []
+get "/contacts" do
+	@contacts = Contact.all
 	erb :contacts
-
 end
 
-get '/contacts/new' do 
+get "/contacts/new" do 
 	erb :new_contact
 end
 
 get "/contacts/:id" do
-	@contact = $rolodex.find_by_index(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		erb :show_contact
 	else
@@ -79,8 +78,12 @@ delete "/contacts/:id" do
 end
 
 
-post '/contacts' do
-	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
-	$rolodex.add_contact(new_contact)
+post "/contacts" do
+	contact = Contact.create(
+		:first_name => params[:first_name],
+		:last_name => params[:last_name],
+		:email => params[:email],
+		:note => params[:note]
+		)
 	redirect to('/contacts')
 end
