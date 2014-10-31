@@ -1,3 +1,7 @@
+<!-- 
+<body>
+
+</body> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,17 +10,47 @@
 	<header>
 		<h1>Welcome to Ruben's CRM App</h1>
 	</header>
-	
-	<h2>Main Menu</h2>
-	<a href="/"> 
-		<img id="menuimg" src="http://craigmart.in/wp-content/themes/wp_craigmart.in/assets/img/crm-logo4.png"/>
-	</a>
 	<body>
-		<%= yield %>
+
+		<div id="wrapper">
+
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li class="sidebar-brand">
+						<a href="/">
+							Main Menu
+							<img id="menuimg" src="http://craigmart.in/wp-content/themes/wp_craigmart.in/assets/img/crm-logo4.png"/>
+						</a>
+					</li>
+					<li>
+						<%= yield %>
+					</li>
+				</ul>
+			</div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12">
+							<h1>Simple Sidebar</h1>
+							<p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /#page-content-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
 	</body>
 	<footer> 
 		<h3>&copy; Bitmaker Labs - Ruben Avila Aguilar</h3>
 	</footer>
+
 </head>
 
 </html>
