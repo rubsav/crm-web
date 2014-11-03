@@ -3,9 +3,6 @@ require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
-# $rolodex= Rolodex.new
-# $rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
-
 class Contact
 	include DataMapper::Resource
 
